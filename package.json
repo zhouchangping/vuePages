@@ -1,0 +1,8 @@
+{
+  "name": "ds-cli-lib-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://git.datatub.com/Uranus/ds-cli-lib-template.git",
+  "author": "youjie",
+  "license": "MIT"
+}
