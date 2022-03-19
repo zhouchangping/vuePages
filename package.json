@@ -1,5 +1,5 @@
 {
-  "name": "vueWebpackCliDemo",
+  "name": "vuePages",
   "version": "1.0.0",
   "description": "+ npm install --save-dev webpack + npm install --save-dev webpack-cli 使用 webpack 4+ 版本，你还需要安装 CLI",
   "private": true,
