@@ -1,0 +1,312 @@
+// {
+//     "editor.fontSize": 14,
+//     "editor.tabSize": 2,
+//     "[html]": {
+//         "editor.defaultFormatter": "HookyQR.beautify"
+//     },
+//     "[javascript]": {
+//         "editor.defaultFormatter": "HookyQR.beautify"
+//     },
+//     "files.associations": {
+//         "*.vue": "vue"
+//     },
+//     // "eslint.options": {
+//     //     "extensions": [
+//     //         ".js",
+//     //         ".ts",
+//     //         ".vue"
+//     //     ]
+//     // },
+//     // "eslint.validate": [
+//     //     "javascript",
+//     //     "vue-html",
+//     //     "html",
+//     //     "javascriptreact",
+//     //     {
+//     //         "language": "vue",
+//     //         "autoFix": true
+//     //     }
+//     // ],
+//     "eslint.enable": true,  //是否开启vscode的eslint
+//     "eslint.options": {    //指定vscode的eslint所处理的文件的后缀
+//         "extensions": [
+//             ".js",
+//             ".vue",
+//             ".ts",
+//             ".tsx"
+//         ]
+//     },
+//     "eslint.validate": [     //确定校验准则
+//         "javascript",
+//         "javascriptreact",
+//         {
+//             "language": "html",
+//             "autoFix": true
+//         },
+//         {
+//             "language": "vue",
+//             "autoFix": true
+//         },
+//         {
+//             "language": "typescript",
+//             "autoFix": true
+//         },
+//         {
+//             "language": "typescriptreact",
+//             "autoFix": true
+//         }
+//     ],
+//     "[jsonc]": {
+//         "editor.defaultFormatter": "vscode.json-language-features"
+//     },
+//     "vetur.validation.template": true, // 通过vetur.valition.template:false关闭Vetur的模板Linting
+//     "vetur.format.defaultFormatterOptions": {
+//         "js-beautify-html": {
+//             "wrap_line_length": 120,
+//             "wrap_attributes": "auto",
+//             "end_with_newline": false
+//         }
+//     },
+//     // "vetur.format.defaultFormatter.css": "prettier",
+//     // "vetur.format.defaultFormatter.html": "js-beautify-html",
+//     "explorer.confirmDragAndDrop": false,
+//     "fileheader.Author": "zhouzhou",
+//     "fileheader.LastModifiedBy": "zhouzhou",
+//     "explorer.confirmDelete": false,
+//     "workbench.colorTheme": "Tomorrow Night Blue",
+//     "editor.codeActionsOnSave": { // eslint vscode自动修复
+//         "source.fixAll.eslint": true
+//     },
+//     "editor.suggestSelection": "first",
+//     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+//     "window.zoomLevel": -1,
+//     "editor.accessibilityPageSize": 14,
+//     "workbench.colorCustomizations": {
+//         "activityBarBadge.background": "#FF7042",
+//         "activityBar.activeBorder": "#FF7042",
+//         "list.activeSelectionForeground": "#FF7042",
+//         "list.inactiveSelectionForeground": "#FF7042",
+//         "list.highlightForeground": "#FF7042",
+//         "scrollbarSlider.activeBackground": "#FF704250",
+//         "editorSuggestWidget.highlightForeground": "#FF7042",
+//         "textLink.foreground": "#FF7042",
+//         "progressBar.background": "#FF7042",
+//         "pickerGroup.foreground": "#FF7042",
+//         "tab.activeBorder": "#FF7042",
+//         "notificationLink.foreground": "#FF7042",
+//         "editorWidget.resizeBorder": "#FF7042",
+//         "editorWidget.border": "#FF7042",
+//         "settings.modifiedItemIndicator": "#FF7042",
+//         "settings.headerForeground": "#FF7042",
+//         "panelTitle.activeBorder": "#FF7042",
+//         "breadcrumb.activeSelectionForeground": "#FF7042",
+//         "menu.selectionForeground": "#FF7042",
+//         "menubar.selectionForeground": "#FF7042",
+//         "editor.findMatchBorder": "#FF7042",
+//         "selection.background": "#FF704240",
+//         "statusBarItem.remoteBackground": "#FF7042"
+//     },
+//     "materialTheme.accent": "Orange",
+//     "workbench.iconTheme": "material-icon-theme",
+//     "todo-tree.tree.showScanModeButton": false,
+//     "files.exclude": {
+//         "**/.git": false
+//     },
+//     "auto-close-tag.activationOnLanguage": [
+//         "xml",
+//         "php",
+//         "blade",
+//         "ejs",
+//         "jinja",
+//         "javascript",
+//         "javascriptreact",
+//         "typescript",
+//         "typescriptreact",
+//         "plaintext",
+//         "markdown",
+//         "vue",
+//         "liquid",
+//         "erb",
+//         "lang-cfml",
+//         "cfml",
+//         "HTML (EEx)",
+//         "HTML (Eex)",
+//         "plist"
+//     ],
+//     "eslint.codeAction.showDocumentation": {
+//         "enable": true
+//     },
+//     "editor.rulers": [
+//     ],
+// }
+{
+  "workbench.colorCustomizations": {},
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "window.zoomLevel": -1,
+  "editor.accessibilityPageSize": 14,
+  "workbench.iconTheme": "material-icon-theme",
+  "todo-tree.tree.showScanModeButton": false,
+  "editor.fontSize": 14,
+  // "workbench.editor.enablePreview": true, //预览模式关闭
+  "editor.formatOnSave": true, // #每次保存的时候自动格式化
+  "editor.codeActionsOnSave": { // 自动修复
+    "source.fixAll.eslint": true,
+    // 文件保存时开启stylelint自动修复程序
+    // "source.fixAll.stylelint": true
+  },
+  // // 防止编辑器内置linter与插件冲突设置
+  // "css.validate": false,
+  // "less.validate": false,
+  // "scss.validate": false,
+  // // 启用stylelint插件
+  // "stylelint.enable": true,
+  "[html]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "eslint.enable": true, //是否开启vscode的eslint
+  // 配置 ESLint 检查的文件类型
+  "eslint.validate": [
+    "javascript",
+    "vue",
+    "html"
+  ],
+  "eslint.options": { //指定vscode的eslint所处理的文件的后缀
+    "extensions": [
+      ".js",
+      ".vue",
+      ".ts",
+      ".tsx",
+      ".css"
+    ]
+  },
+  "files.associations": {
+    "*.wpy": "vue",
+    "*.wxml": "wxml",
+    "*.cjson": "jsonc",
+    "*.wxss": "css",
+    "*.wxs": "javascript",
+    "*.html": "html"
+  },
+  "emmet.includeLanguages": {
+    "wxml": "html"
+  },
+  // "minapp-vscode.disableAutoConfig": true,
+  // vscode默认启用了根据文件类型自动设置tabsize的选项
+  "editor.detectIndentation": false,
+  // 重新设定tabsize
+  "editor.tabSize": 2,
+  // //  #去掉代码结尾的分号
+  // "prettier.semi": false,
+  // //  #使用单引号替代双引号
+  // "prettier.singleQuote": true,
+  //  #让函数(名)和后面的括号之间加个空格
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  // #让vue中的js按编辑器自带的ts格式进行格式化
+  "vetur.format.defaultFormatter.js": "vscode-typescript",
+  "vetur.validation.template": false, // 通过vetur.valition.template:false关闭Vetur的模板Linting
+  "git.enableSmartCommit": true,
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  //一定要在vutur.defaultFormatterOptions参数中设置，单独修改prettier扩展的设置是无法解决这个问题的，因为perttier默认忽略了vue文件（事实上从忽略列表移除vue也不能解决这个问题）
+  "vetur.format.defaultFormatterOptions": {
+    // "prettier": {
+    //   "semi": false, // 格式化不加分号
+    //   "singleQuote": true, // 格式化以单引号为主
+    // },
+    "js-beautify-html": {
+      // force-aligned | force-expand-multiline
+      "wrap_attributes": "force-aligned",
+      "wrap_line_length": 120,
+      // "wrap_attributes": "auto",
+      "end_with_newline": false,
+      // "wrap_attributes": "auto",
+    },
+    "prettyhtml": {
+      "printWidth": 100,
+      "singleQuote": false,
+      "wrapAttributes": false,
+      "sortAttributes": true
+    },
+  },
+  // 插件KoroFileHeader
+  // 文件头部注释-快捷键crtl+alt+i（window）,ctrl+cmd+t (mac)
+  // "fileheader.customMade": {
+  //   "Descripttion": "",
+  //   //"version": "",
+  //   "Author": "voanit",
+  //   "Date": "Do not edit",
+  //   "LastEditors": "voanit",
+  //   "LastEditTime": "Do not Edit"
+  // },
+  // //函数注释-快捷键ctrl+alt+t (window), ctrl+alt+t(mac)
+  // "fileheader.cursorMode": {
+  //   "name": "",
+  //   // "test": "test font",
+  //   // "msg": "",
+  //   "param": "",
+  //   "return": ""
+  // },
+  "[vue]": {
+    "editor.defaultFormatter": "octref.vetur"
+  },
+  // "javascript.updateImportsOnFileMove.enabled": "never",
+  // "javascript.implicitProjectConfig.experimentalDecorators": true,
+  // "workbench.editor.showTabs": true,
+  // "terminal.integrated.rendererType": "dom",
+  // "sync.gist": "396472a5bb443e3680d5a0e2ffccefe8",
+  // "window.zoomLevel": 0,
+  // "diffEditor.ignoreTrimWhitespace": false,
+  // "launch": {},
+  // "[jsonc]": {
+  //   "editor.defaultFormatter": "remimarsal.prettier-now"
+  // },
+  // "[typescript]": {
+  //   "editor.defaultFormatter": "remimarsal.prettier-now"
+  // },
+  "editor.rulers": [],
+  "workbench.colorTheme": "Night Owl",
+  "vscode_custom_css.imports": [],
+  // "update.enableWindowsBackgroundUpdates": true,
+  "background.customImages": [
+    "/Users/zhouchangping/img/003613-15833397731aa2.jpg"
+  ],
+  "background.useDefault": false,
+  "background.style": {
+    "content": " '' ",
+    "pointer-events": "none",
+    "position": "absolute",
+    "width": "100%",
+    "height": "100%",
+    "z-index": "999999",
+    "bacground-repeat": "no-repeat",
+    "opacity": "0.1",
+    "background-size": "100% 100%"
+  },
+  "auto-close-tag.activationOnLanguage": [
+    "xml",
+    "php",
+    "blade",
+    "ejs",
+    "jinja",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "plaintext",
+    "markdown",
+    "vue",
+    "liquid",
+    "erb",
+    "lang-cfml",
+    "cfml",
+    "HTML (EEx)",
+    "HTML (Eex)",
+    "plist"
+  ],
+  "explorer.confirmDragAndDrop": false
+}

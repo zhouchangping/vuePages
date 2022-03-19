@@ -1,0 +1,16 @@
+body {
+  background-color: #d6d7dc;
+}
+
+/* // cssnext
+// 在:root定义变量,可以理解为全局变量
+// 变量用 var 函数读取 */
+:root{
+ --red:#f00;
+ --grey:#ccc;
+}
+
+#app {
+ color:var(--red);
+ background-color:var(--grey);
+}

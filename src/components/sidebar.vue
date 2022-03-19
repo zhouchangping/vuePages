@@ -1,0 +1,74 @@
+<template>
+    <div class="sidebar" v-if="isShowSideBar">
+      <div class="sidebar-inner">
+        <div class="list">
+          <ul class="menu-root">
+            <li v-for="(items, index) in sidebarList" :key="index">
+              <a
+                class="sidebar-link"
+                :class="{ current: index == topActiveIndex }"
+                >{{ items.title }}</a
+              >
+              <ul class="menu-sub">
+                <li
+                  class="menu-sub-li"
+                  v-for="(item, i) in items.lists"
+                  :key="i"
+                  @click="sidebarFn(item.id, index)"
+                >
+                  <router-link
+                    :to="{ path: item.url }"
+                    class="section-link"
+                    :class="{ active: item.id == isActiveIndex }"
+                  >
+                    {{ item.title }}
+                  </router-link>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+</template>
+<script>
+export default {
+  name: "sidebar",
+  props: {
+    urlList: {
+      type: Array,
+      default: () => {
+        return []
+      }
+    },
+    showSideBar: {
+      type: Boolean,
+      default: () => {
+        return true
+      }
+    },
+  },
+  data () {
+    return {
+      sidebarList: this.urlList,
+      isShowSideBar: this.showSideBar,
+      topActiveIndex: 0,
+      isActiveIndex: 0,
+    }
+  },
+  created () {
+  },
+  methods: {
+    sidebarFn (i, topIndex) {
+      if (this.isActiveIndex == i) return;
+      this.topActiveIndex = topIndex
+      this.isActiveIndex = i;
+    }
+  },
+  components: {
+  }
+};
+</script>
+<style scoped lang="scss">
+</style>

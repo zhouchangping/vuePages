@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>rrweb</title>
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/rrweb@latest/dist/rrweb.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/rrweb@latest/dist/rrweb.min.js"></script>
+</head>
+<body>
+  <div id="test">
+    12313
+  </div>
+
+  <div id="test2" style="margin-top: 300px">
+    44535
+  </div>
+
+  <div id="test5" style="margin-left: 300px">
+    hahahhfawoshi 
+  </div>
+
+  <div id="test4">
+    hahfhafhfas 
+  </div>
+
+  <div id="test3" style="margin-top: 300px">
+    43434
+  </div>
+
+  <script>
+    const test = document.getElementById("test");
+    test.onclick = function () {
+      consoel.log(123)
+    }
+
+    const test2 = document.getElementById("test2");
+    test2.onclick = function () {
+      consoel.log(1234343)
+    }
+
+    const test4 = document.getElementById("test4");
+    test4.onclick = function () {
+      consoel.log(44444)
+    }
+
+    const test5 = document.getElementById("test5");
+
+    const test3 = document.getElementById("test3");
+    test3.onclick = function () {
+      console.log(eventsMatrix)
+      const replayer = new rrweb.Replayer(events);
+//       const replayer = new rrweb.Replayer(
+//         {
+//   target: document.body, // 可以自定义 DOM 元素
+//   data: {
+//     eventsMatrix,
+//   },
+//   // UNSAFE_replayCanvas: true //支持回放 canvas 
+// }
+//       );
+      // 播放
+      replayer.play();
+
+      
+      // // 从第 3 秒的内容开始播放
+      // replayer.play(3000);
+
+      // // 暂停
+      // replayer.pause();
+
+      // // 暂停至第 5 秒处
+      // replayer.pause(5000);
+    }
+    // 使用二维数组来存放多个 event 数组
+const eventsMatrix = [[]];
+const events = [];
+rrweb.record({
+  emit(event, isCheckout) {
+    // isCheckout 是一个标识，告诉你重新制作了快照
+    if (isCheckout) {
+      eventsMatrix.push([]);
+    }
+    const lastEvents = eventsMatrix[eventsMatrix.length - 1];
+    lastEvents.push(event);
+  },
+  checkoutEveryNth: 100, // 每 200 个 event 重新制作快照
+});
+
+// 向后端传送最新的两个 event 数组
+window.onerror = function () {
+  console.log(34353)
+  const len = eventsMatrix.length;
+  if (len > 1) {
+    events = eventsMatrix[len - 2].concat(eventsMatrix[len - 1]);
+  const body = JSON.stringify({ events });
+  }
+  
+  // console.log(eventsMatrix)
+  // console.log(len)
+  // if (len > 1) {
+  //   // console.log(eventsMatrix[len - 2])
+  //   const events = eventsMatrix[len - 2].concat(eventsMatrix[len - 1]);
+  //   const body = JSON.stringify({ events });
+  // }
+  
+  // console.log(body, "---------")
+  // fetch('http://YOUR_BACKEND_API', {
+  //   method: 'POST',
+  //   headers: {
+  //     'Content-Type': 'application/json',
+  //   },
+  //   body,
+  // });
+};
+
+
+    </script>
+</body>
+</html>

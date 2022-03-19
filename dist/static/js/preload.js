@@ -1,0 +1,1 @@
+const names=123;console.log(123);
