@@ -31,7 +31,7 @@
     "file-loader": "^6.0.0",
     "friendly-errors-webpack-plugin": "^1.7.0",
     "html-loader": "^1.3.2",
-    "html-webpack-plugin": "^5.0.0-beta.4",
+    "html-webpack-plugin": "^5.0.0-alpha.6",
     "hyperdown": "^2.4.9",
     "image-webpack-loader": "^6.0.0",
     "loader-utils": "^2.0.0",
